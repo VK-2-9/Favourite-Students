@@ -6,9 +6,10 @@ function FavouriteList() {
     useContext(ListContext);
     
     var newList=[]
-    const removeStudent=(e)=>{
-        newList= favStudentList.filter((item)=>{
-                if(e.target.value===item.name){
+    const removeStudent=(item)=>{
+        item.clicked=false
+        newList= favStudentList.filter((x)=>{
+                if(item.name===x.name){
                     return false
                 }
                 else return true
@@ -23,7 +24,7 @@ function FavouriteList() {
           <div className="flex gap-24 my-4 ">
             <p className="w-56 text-xl">{item.id}. {item.name} </p>
             <button className="bg-[#f72a2a] border rounded-xl text-white p-1 px-2 h-fit"
-             onClick={removeStudent} value={item.name}   
+             onClick={()=>removeStudent(item)} value={item.name}   
             >
               Remove
             </button>

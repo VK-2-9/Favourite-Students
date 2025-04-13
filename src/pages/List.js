@@ -1,14 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ListContext } from "../components.js/ListContext";
 
 function List() {
   const { studentList, setStudentList, favStudentList, setFavStudentList } =
     useContext(ListContext);
 
-    const addToFav=(e)=>{
-        setFavStudentList([...favStudentList,{id:favStudentList.length+1,name:e.target.value}])
-       
+    const addToFav=(item)=>{
+        item.clicked=true
+        setFavStudentList([...favStudentList,{id:favStudentList.length+1,name:item.name,clicked:item.clicked}])
+        console.log(favStudentList) 
+        
     }
+
+
 
   return (
     <div className="m-5">
@@ -19,7 +23,7 @@ function List() {
               {item.id}. {item.name}{" "}
             </p>
             <button className="bg-[#2bb626] border rounded-xl text-white p-1 px-2 h-fit"
-             onClick={addToFav}   value={item.name}
+             onClick={()=>addToFav(item)}  disabled={item.clicked}
             >
               Add to Favourite
             </button>

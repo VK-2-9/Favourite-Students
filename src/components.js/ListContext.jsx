@@ -8,37 +8,37 @@ function ListContextProvider(data){
         {
             id:1,
             name:"Messi",
-            favourite:true,
+            clicked:false,
         },
         {
             id:2,
             name:"Ronaldo",
-            favourite:false,
+            clicked:false,
         },
         {
             id:3,
             name:"Neymar",
-            favourite:true,
+            clicked:false,
         },
         {
             id:4,
             name:"Gavi",
-            favourite:false,
+            clicked:false,
         },
         {
             id:5,
             name:"Pedri",
-            favourite:false,
+            clicked:false,
         },
         {
             id:6,
             name:"Yamal",
-            favourite:false,
+            clicked:false,
         },
         {
             id:7,
             name:"Ramos",
-            favourite:false,
+            clicked:false,
         },
     ])
    
