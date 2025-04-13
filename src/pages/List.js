@@ -59,7 +59,7 @@ function List() {
 
       {studentList.map((item) => {
         return (
-          <div className="flex gap-4 my-4 ">
+          <div className="flex gap-4 my-4 flex-wrap ">
             <p className="w-56 text-xl mr-20">
               {item.id}. {item.name}{" "}
             </p>
